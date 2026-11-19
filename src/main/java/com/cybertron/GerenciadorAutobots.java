@@ -17,7 +17,7 @@ public class GerenciadorAutobots {
     public double calcularEnergonTotal() {
         double total = 0;
         for (int i = 0; i < lista.size(); i++) {
-            total += lista.get(i).getEnergoon();
+            total += lista.get(i).getEnergon();
         }
         return total;
     }
@@ -33,10 +33,10 @@ public class GerenciadorAutobots {
 
     public void reparar(Autobot autobot) {
         try {
-            if (autobot.getEnergoon() < 0) {
+            if (autobot.getEnergon() < 0) {
                 throw new Exception("Energon negativo");
             }
-            autobot.setEnergoon(autobot.getEnergoon() + ENERGON_ADICIONAL);
+            autobot.setEnergon(autobot.getEnergon() + ENERGON_ADICIONAL);
         } catch (Exception causa) {
             System.out.println("Nao foi possível reparar o autobot" + causa);
 
@@ -44,9 +44,9 @@ public class GerenciadorAutobots {
     }
 
     public String classificar(Autobot autobot) {
-        if (autobot.getEnergoon() > LIMITE_ENERGON_ALTO) {
+        if (autobot.getEnergon() > LIMITE_ENERGON_ALTO) {
             return "ELITE";
-        } else if (autobot.getEnergoon() > LIMITE_ENERGON_MEDIA) {
+        } else if (autobot.getEnergon() > LIMITE_ENERGON_MEDIA) {
             return "PADRAO";
         } else {
             return "RESERVA";
