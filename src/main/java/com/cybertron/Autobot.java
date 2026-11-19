@@ -2,12 +2,12 @@ package com.cybertron;
 
 public class Autobot {
     private String nomeAutobot;
-    private double energoon;
+    private double energon;
     private int nivel;
 
-    public Autobot(String nomeAutobot, double energoon, int nivel) {
+    public Autobot(String nomeAutobot, double energon, int nivel) {
         this.nomeAutobot = nomeAutobot;
-        this.energoon = energoon;
+        this.energon = energon;
         this.nivel = nivel;
     }
 
@@ -19,12 +19,12 @@ public class Autobot {
         this.nomeAutobot = nomeAutobot;
     }
 
-    public double getEnergoon() {
-        return energoon;
+    public double getEnergon() {
+        return energon;
     }
 
-    public void setEnergoon(double energoon) {
-        this.energoon = energoon;
+    public void setEnergoon(double energon) {
+        this.energon = energon;
     }
 
     public int getNivel() {
